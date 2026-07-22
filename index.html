@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>Trade With Gautam Jhaa | Official Telegram Channel</title>
-<meta name="description" content="Join Trade With Gautam Jhaa's official Telegram channel for daily Indian stock market analysis, free trading education and market updates.">
+<title>Trade With Gautam Jhaa | Official Telegram Channel - Indian Stock Market Analysis</title>
+<meta name="description" content="Join Gautam Jhaa's official Telegram channel for daily Indian stock market analysis, Nifty & Bank Nifty stock calls, free trading education and live market alerts. Free to join, instant access.">
+<meta property="og:title" content="Trade With Gautam Jhaa | Official Telegram Channel">
+<meta property="og:description" content="Daily Indian stock market analysis, stock calls, free education & live alerts. Join free now.">
+<meta property="og:type" content="website">
 <style>
   :root{
     --bg: #fdf6ec;
@@ -93,7 +96,9 @@
     margin: 0 auto 16px;
     border: 3px solid #fff;
     box-shadow: 0 6px 18px rgba(201,146,46,0.35);
+    object-fit: cover;
   }
+  img.avatar{ display: block; }
 
   .badge{
     display: inline-flex;
@@ -166,15 +171,20 @@
   .cta-btn{
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     background: linear-gradient(135deg, var(--gold-bright), var(--gold));
     color: #14100a;
     font-weight: 700;
     font-size: 17px;
-    padding: 16px 32px;
-    border-radius: 10px;
+    padding: 18px 32px;
+    border-radius: 12px;
     box-shadow: 0 8px 24px rgba(212,175,106,0.25);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    line-height: 1.4;
   }
   .cta-btn:hover{
     transform: translateY(-2px);
@@ -191,6 +201,13 @@
     font-size: 13px;
   }
   .micro-trust span{ color: var(--green); }
+
+  .join-count{
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
 
   /* Features */
   .features{
@@ -283,7 +300,8 @@
   <section class="hero">
     <div class="container">
       <div class="badge"><span class="dot"></span> CHANNEL LIVE &amp; ACTIVE</div>
-      <div class="avatar">📊</div>
+      <img class="avatar" src="gautamjha.jpg" alt="Gautam Jhaa - Stock Market Analyst" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+      <div class="avatar" id="avatar-fallback" style="display:none;">📊</div>
       <div class="eyebrow">Official Telegram Channel</div>
       <h1>TRADE WITH <span class="gold">GAUTAM JHAA</span></h1>
       <p class="sub">Stock Market Analysis &middot; Indian Markets</p>
@@ -294,15 +312,18 @@
         <div><b>Live</b>Alerts</div>
       </div>
 
-      <a class="cta-btn" href="#" id="join-btn">✈️ Join Telegram Channel</a>
+      <a class="cta-btn" href="#" id="join-btn">
+        <span>✈️ JOIN TELEGRAM CHANNEL<br><small style="font-weight:500; font-size:12px; opacity:0.85;">Tap Karo &amp; Abhi Join Karo</small></span>
+      </a>
       <div class="micro-trust"><span>✓</span> Free to Join &nbsp; <span>✓</span> No Charges &nbsp; <span>✓</span> Instant Access</div>
+      <div class="join-count">🔥 18000 logon ne abhi join kiya</div>
     </div>
   </section>
 
   <section class="features">
     <div class="container">
       <div class="eyebrow" style="text-align:center;">What You Get</div>
-      <h2>Everything in one place</h2>
+      <h2>Everything you need to trade smarter, in one place.</h2>
       <div class="feature-grid">
         <div class="feature">
           <span class="icon">📈</span>
@@ -341,7 +362,7 @@
 
   <footer>
     <div class="container">
-      &copy; 2026 Trade With Gautam Jhaa &middot; Made with ❤️ for Indian Traders
+      &copy; 2026 Gautam Jhaa &middot; Made with ❤️ for Indian Traders
       <div>
         <a href="#" aria-label="Telegram">✈️</a>
       </div>
@@ -350,20 +371,17 @@
 
 <script>
   // Replace this with your real Telegram invite link
-  const TELEGRAM_LINK = "https://t.me/+AkJL5ouqfyAyMmJl";
+  const TELEGRAM_LINK = "https://t.me/+nI0d3B4AXL9iNGI1";
   document.getElementById('join-btn').href = TELEGRAM_LINK;
   document.getElementById('join-btn-2').href = TELEGRAM_LINK;
 
   // Decorative ticker tape (not live data)
   const symbols = [
-    {t:"NIFTY 50", v:"+0.8%", up:true},
-    {t:"SENSEX", v:"+0.6%", up:true},
-    {t:"BANKNIFTY", v:"-0.3%", up:false},
-    {t:"RELIANCE", v:"+1.2%", up:true},
-    {t:"TCS", v:"+0.4%", up:true},
-    {t:"HDFC BANK", v:"-0.2%", up:false},
-    {t:"INFY", v:"+0.9%", up:true},
-    {t:"TATA MOTORS", v:"+2.1%", up:true}
+    {t:"NIFTY", v:"▲ 0.82%", up:true},
+    {t:"BANK NIFTY", v:"▲ 1.15%", up:true},
+    {t:"SENSEX", v:"▲ 0.74%", up:true},
+    {t:"FINNIFTY", v:"▲ 0.91%", up:true},
+    {t:"MIDCAP", v:"▲ 0.62%", up:true}
   ];
   const tickerEl = document.getElementById('ticker');
   const set = [...symbols, ...symbols]; // duplicate for seamless loop
