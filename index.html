@@ -1,1 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Trade With Gautam Jhaa | Official Telegram Channel</title>
+<meta name="description" content="Join Trade With Gautam Jhaa's official Telegram channel for daily Indian stock market analysis, free trading education and market updates.">
+<style>
+  :root{
+    --bg: #0b0f14;
+    --bg-2: #0f1620;
+    --panel: #121a24;
+    --gold: #d4af6a;
+    --gold-bright: #f0c987;
+    --green: #3ecf8e;
+    --red: #e2665a;
+    --text: #eef1f4;
+    --muted: #8b98a5;
+    --line: #24303c;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,h2,h3{
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  .container{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Ticker tape */
+  .ticker-wrap{
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .ticker{
+    display: flex;
+    gap: 32px;
+    white-space: nowrap;
+    animation: scroll-left 28s linear infinite;
+    width: max-content;
+  }
+  .ticker span{
+    font-family: 'Consolas', 'SF Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .ticker span.up{ color: var(--green); }
+  .ticker span.down{ color: var(--red); }
+
+  @keyframes scroll-left{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .ticker{ animation: none; }
+  }
+
+  /* Hero */
+  .hero{
+    padding: 64px 0 48px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 600px 300px at 50% 0%, rgba(212,175,106,0.10), transparent);
+  }
+
+  .badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(62,207,142,0.10);
+    border: 1px solid rgba(62,207,142,0.35);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  .badge .dot{
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{ opacity: 1; }
+    50%{ opacity: 0.35; }
+  }
+
+  .eyebrow{
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .hero h1{
+    font-size: clamp(40px, 8vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .hero h1 .gold{ color: var(--gold-bright); }
+
+  .hero .sub{
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .stats-row{
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .stats-row div{
+    font-family: 'Consolas', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .stats-row div b{
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: var(--text);
+  }
+
+  .cta-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color: #14100a;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 16px 32px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(212,175,106,0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(212,175,106,0.35);
+  }
+  .cta-btn:focus-visible{
+    outline: 3px solid var(--gold-bright);
+    outline-offset: 3px;
+  }
+
+  .micro-trust{
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .micro-trust span{ color: var(--green); }
+
+  /* Features */
+  .features{
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+  }
+  .features .eyebrow{ text-align:center; }
+  .features h2{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .feature-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .feature{
+    background: var(--panel);
+    padding: 28px 24px;
+  }
+  .feature .icon{
+    font-size: 22px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .feature h3{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .feature p{
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 560px){
+    .feature-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* Disclaimer */
+  .disclaimer{
+    margin: 48px 0;
+    padding: 20px 24px;
+    background: rgba(226,102,90,0.06);
+    border: 1px solid rgba(226,102,90,0.25);
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .disclaimer b{ color: var(--red); }
+
+  /* Final CTA */
+  .final-cta{
+    text-align: center;
+    padding: 40px 0 64px;
+  }
+  .final-cta h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  footer{
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a{
+    display: inline-flex;
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--gold);
+  }
+</style>
+</head>
+<body>
+
+  <div class="ticker-wrap">
+    <div class="ticker" id="ticker"></div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge"><span class="dot"></span> CHANNEL LIVE &amp; ACTIVE</div>
+      <div class="eyebrow">Official Telegram Channel</div>
+      <h1>TRADE WITH<br><span class="gold">GAUTAM JHAA</span></h1>
+      <p class="sub">Stock Market Analysis &middot; Indian Markets</p>
+
+      <div class="stats-row">
+        <div><b>Daily</b>Analysis</div>
+        <div><b>Free</b>Education</div>
+        <div><b>Live</b>Alerts</div>
+      </div>
+
+      <a class="cta-btn" href="#" id="join-btn">✈️ Join Telegram Channel</a>
+      <div class="micro-trust"><span>✓</span> Free to Join &nbsp; <span>✓</span> No Charges &nbsp; <span>✓</span> Instant Access</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="eyebrow" style="text-align:center;">What You Get</div>
+      <h2>Everything in one place</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="icon">📈</span>
+          <h3>Daily Market Analysis</h3>
+          <p>Pre-market &amp; post-market breakdowns every trading day.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🎯</span>
+          <h3>Stock Calls</h3>
+          <p>Clear entry, target &amp; stop-loss levels.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">📚</span>
+          <h3>Free Education</h3>
+          <p>Learn trading from basics to advanced.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">⚡</span>
+          <h3>Market Updates</h3>
+          <p>Instant alerts when opportunities arise.</p>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <b>⚠ Disclaimer:</b> All content shared on this channel is purely for educational and informational purposes. Trading in stocks and derivatives involves risk. Please consult a SEBI-registered financial advisor before making investment decisions.
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Ready to start?</h2>
+      <a class="cta-btn" href="#" id="join-btn-2">✈️ Join Telegram Channel Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Trade With Gautam Jhaa &middot; Made with ❤️ for Indian Traders
+      <div>
+        <a href="#" aria-label="Telegram">✈️</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // Replace this with your real Telegram invite link
+  const TELEGRAM_LINK = "https://t.me/your_channel_here";
+  document.getElementById('join-btn').href = TELEGRAM_LINK;
+  document.getElementById('join-btn-2').href = TELEGRAM_LINK;
+
+  // Decorative ticker tape (not live data)
+  const symbols = [
+    {t:"NIFTY 50", v:"+0.8%", up:true},
+    {t:"SENSEX", v:"+0.6%", up:true},
+    {t:"BANKNIFTY", v:"-0.3%", up:false},
+    {t:"RELIANCE", v:"+1.2%", up:true},
+    {t:"TCS", v:"+0.4%", up:true},
+    {t:"HDFC BANK", v:"-0.2%", up:false},
+    {t:"INFY", v:"+0.9%", up:true},
+    {t:"TATA MOTORS", v:"+2.1%", up:true}
+  ];
+  const tickerEl = document.getElementById('ticker');
+  const set = [...symbols, ...symbols]; // duplicate for seamless loop
+  tickerEl.innerHTML = set.map(s =>
+    `<span class="${s.up ? 'up' : 'down'}">${s.t} ${s.v}</span>`
+  ).join('');
+</script>
+
+</body>
+</html>
 
