@@ -7,16 +7,16 @@
 <meta name="description" content="Join Trade With Gautam Jhaa's official Telegram channel for daily Indian stock market analysis, free trading education and market updates.">
 <style>
   :root{
-    --bg: #0b0f14;
-    --bg-2: #0f1620;
-    --panel: #121a24;
-    --gold: #d4af6a;
-    --gold-bright: #f0c987;
-    --green: #3ecf8e;
-    --red: #e2665a;
-    --text: #eef1f4;
-    --muted: #8b98a5;
-    --line: #24303c;
+    --bg: #fdf6ec;
+    --bg-2: #f8ead2;
+    --panel: #fffaf1;
+    --gold: #c9922e;
+    --gold-bright: #e0a83e;
+    --green: #1f9d55;
+    --red: #c0392b;
+    --text: #3a2c17;
+    --muted: #8a7658;
+    --line: #ecdcbb;
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -45,7 +45,7 @@
 
   /* Ticker tape */
   .ticker-wrap{
-    background: var(--bg-2);
+    background: #fff;
     border-bottom: 1px solid var(--line);
     overflow: hidden;
     padding: 10px 0;
@@ -76,18 +76,31 @@
 
   /* Hero */
   .hero{
-    padding: 64px 0 48px;
+    padding: 48px 0 48px;
     text-align: center;
-    background:
-      radial-gradient(ellipse 600px 300px at 50% 0%, rgba(212,175,106,0.10), transparent);
+    background: linear-gradient(180deg, #f8ead2 0%, #fdf6ec 60%);
+  }
+
+  .avatar{
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    margin: 0 auto 16px;
+    border: 3px solid #fff;
+    box-shadow: 0 6px 18px rgba(201,146,46,0.35);
   }
 
   .badge{
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(62,207,142,0.10);
-    border: 1px solid rgba(62,207,142,0.35);
+    background: rgba(31,157,85,0.08);
+    border: 1px solid rgba(31,157,85,0.35);
     color: var(--green);
     font-size: 12px;
     font-weight: 600;
@@ -95,7 +108,7 @@
     text-transform: uppercase;
     padding: 6px 14px;
     border-radius: 999px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
   .badge .dot{
     width: 6px; height: 6px;
@@ -118,9 +131,10 @@
   }
 
   .hero h1{
-    font-size: clamp(40px, 8vw, 64px);
-    line-height: 1.05;
+    font-size: clamp(28px, 7vw, 52px);
+    line-height: 1.1;
     margin-bottom: 8px;
+    white-space: nowrap;
   }
   .hero h1 .gold{ color: var(--gold-bright); }
 
@@ -203,6 +217,7 @@
     background: var(--panel);
     padding: 28px 24px;
   }
+  .feature h3{ color: var(--text); }
   .feature .icon{
     font-size: 22px;
     margin-bottom: 12px;
@@ -226,8 +241,8 @@
   .disclaimer{
     margin: 48px 0;
     padding: 20px 24px;
-    background: rgba(226,102,90,0.06);
-    border: 1px solid rgba(226,102,90,0.25);
+    background: rgba(192,57,43,0.06);
+    border: 1px solid rgba(192,57,43,0.25);
     border-radius: 10px;
     font-size: 13px;
     color: var(--muted);
@@ -268,8 +283,9 @@
   <section class="hero">
     <div class="container">
       <div class="badge"><span class="dot"></span> CHANNEL LIVE &amp; ACTIVE</div>
+      <div class="avatar">📊</div>
       <div class="eyebrow">Official Telegram Channel</div>
-      <h1>TRADE WITH<br><span class="gold">GAUTAM JHAA</span></h1>
+      <h1>TRADE WITH <span class="gold">GAUTAM JHAA</span></h1>
       <p class="sub">Stock Market Analysis &middot; Indian Markets</p>
 
       <div class="stats-row">
@@ -334,7 +350,7 @@
 
 <script>
   // Replace this with your real Telegram invite link
-  const TELEGRAM_LINK = "https://t.me/your_channel_here";
+  const TELEGRAM_LINK = "https://t.me/+AkJL5ouqfyAyMmJl";
   document.getElementById('join-btn').href = TELEGRAM_LINK;
   document.getElementById('join-btn-2').href = TELEGRAM_LINK;
 
@@ -358,4 +374,3 @@
 
 </body>
 </html>
-
